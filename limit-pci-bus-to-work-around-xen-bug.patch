@@ -1,0 +1,12 @@
+--- linux-4.11/drivers/acpi/pci_root.c~	2017-05-01 02:47:48.000000000 +0000
++++ linux-4.11/drivers/acpi/pci_root.c	2017-05-06 15:54:41.337432795 +0000
+@@ -541,6 +541,9 @@
+ 	/* Check _CRS first, then _BBN.  If no _BBN, default to zero. */
+ 	root->secondary.flags = IORESOURCE_BUS;
+ 	status = try_get_root_bridge_busnr(handle, &root->secondary);
++	if (root->secondary.end == 0xFF && root->secondary.start == 0)
++		root->secondary.start = 64;
++
+ 	if (ACPI_FAILURE(status)) {
+ 		/*
+ 		 * We need both the start and end of the downstream bus range

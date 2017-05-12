@@ -1,0 +1,24 @@
+Follow the AWS EBS tuning guide for Xen-blkfront
+
+--- linux-4.10.10/drivers/block/xen-blkfront.c~	2017-04-12 10:43:04.000000000 +0000
++++ linux-4.10.10/drivers/block/xen-blkfront.c	2017-04-23 18:56:59.135533875 +0000
+@@ -124,7 +124,7 @@
+  * by the backend driver.
+  */
+ 
+-static unsigned int xen_blkif_max_segments = 32;
++static unsigned int xen_blkif_max_segments = 128;
+ module_param_named(max_indirect_segments, xen_blkif_max_segments, uint,
+ 		   S_IRUGO);
+ MODULE_PARM_DESC(max_indirect_segments,
+--- linux-4.11/drivers/block/xen-blkfront.c~	2017-05-01 02:47:48.000000000 +0000
++++ linux-4.11/drivers/block/xen-blkfront.c	2017-05-01 13:24:10.379404903 +0000
+@@ -130,7 +130,7 @@
+ MODULE_PARM_DESC(max_indirect_segments,
+ 		 "Maximum amount of segments in indirect requests (default is 32)");
+ 
+-static unsigned int xen_blkif_max_queues = 4;
++static unsigned int xen_blkif_max_queues = 16;
+ module_param_named(max_queues, xen_blkif_max_queues, uint, S_IRUGO);
+ MODULE_PARM_DESC(max_queues, "Maximum number of hardware queues/rings used per virtual disk");
+ 
