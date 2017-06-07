@@ -34,7 +34,6 @@ BuildRequires:  lz4
 %define __strip /bin/true
 
 #    000X: cve, bugfixes patches
-Patch0001: cve-2017-9242.patch
 
 #    00XY: Mainline patches, upstream backports
 
@@ -78,7 +77,6 @@ Linux kernel extra files
 %setup -q -n linux-4.11.3
 
 #     000X  cve, bugfixes patches
-%patch0001 -p1
 
 #     00XY  Mainline patches, upstream backports
 
