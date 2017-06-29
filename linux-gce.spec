@@ -4,13 +4,13 @@
 #
 
 Name:           linux-gce
-Version:        4.11.7
-Release:        29
+Version:        4.11.8
+Release:        30
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.11.7.tar.xz
+Source0:        https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.11.8.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -74,7 +74,7 @@ Group:          kernel
 Linux kernel extra files
 
 %prep
-%setup -q -n linux-4.11.7
+%setup -q -n linux-4.11.8
 
 #     000X  cve, bugfixes patches
 
