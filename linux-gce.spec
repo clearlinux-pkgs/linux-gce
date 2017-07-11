@@ -5,7 +5,7 @@
 
 Name:           linux-gce
 Version:        4.12.0
-Release:        31
+Release:        32
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
@@ -59,7 +59,7 @@ Patch0118: 0118-igb-no-runtime-pm-to-fix-reboot-oops.patch
 Patch0119: 0119-tweak-perfbias.patch
 Patch0120: 0120-e1000e-increase-pause-and-refresh-time.patch
 Patch0121: 0121-time-ntp-fix-wakeups.patch
-Patch0122: 0122-mm-reduce-vmstat-wakups.patch
+Patch0122: 0122-mm-reduce-vmstat-wakeups.patch
 Patch0123: 0123-config-no-Atom.patch
 
 
