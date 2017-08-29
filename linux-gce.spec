@@ -5,7 +5,7 @@
 
 Name:           linux-gce
 Version:        4.12.9
-Release:        41
+Release:        42
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
@@ -34,6 +34,7 @@ BuildRequires:  lz4
 %define __strip /bin/true
 
 #    000X: cve, bugfixes patches
+Patch0001: cve-2017-13693.patch
 
 #    00XY: Mainline patches, upstream backports
 
@@ -78,6 +79,7 @@ Linux kernel extra files
 %setup -q -n linux-4.12.9
 
 #     000X  cve, bugfixes patches
+%patch0001 -p1
 
 #     00XY  Mainline patches, upstream backports
 
