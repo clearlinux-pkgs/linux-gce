@@ -16,16 +16,16 @@ diff --git a/arch/x86/kernel/tsc.c b/arch/x86/kernel/tsc.c
 index 714dfba6a1e7..97b9398914fd 100644
 --- a/arch/x86/kernel/tsc.c
 +++ b/arch/x86/kernel/tsc.c
-@@ -1435,6 +1435,9 @@ unsigned long calibrate_delay_is_known(void)
- 	if (!tsc_disabled && !cpu_has(&cpu_data(cpu), X86_FEATURE_CONSTANT_TSC))
+@@ -1352,6 +1352,9 @@ unsigned long calibrate_delay_is_known(void)
+ 	if (tsc_disabled || !constant_tsc || !mask)
  		return 0;
  
 +	if (cpu != 0)
 +		return cpu_data(0).loops_per_jiffy;
 +
- 	if (!mask)
- 		return 0;
- 
+ 	sibling = cpumask_any_but(mask, cpu);
+ 	if (sibling < nr_cpu_ids)
+ 		return cpu_data(sibling).loops_per_jiffy;
 -- 
 2.13.2
 
