@@ -1,7 +1,7 @@
-From c862790ab2d2e3e716fc6bbdb3cfc3e80a2489f4 Mon Sep 17 00:00:00 2001
+From 39861f7f647868153341f79004b890691b1c9603 Mon Sep 17 00:00:00 2001
 From: Arjan van de Ven <arjan@linux.intel.com>
 Date: Fri, 6 Jan 2017 15:34:09 +0000
-Subject: [PATCH 117/127] ipv4/tcp: allow the memory tuning for tcp to go a
+Subject: [PATCH 116/127] ipv4/tcp: allow the memory tuning for tcp to go a
  little bigger than default
 
 ---
@@ -9,10 +9,10 @@ Subject: [PATCH 117/127] ipv4/tcp: allow the memory tuning for tcp to go a
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 40aca7803cf2..cdb4672df837 100644
+index 40cbe5609663..2c52f584e420 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3444,8 +3444,8 @@ void __init tcp_init(void)
+@@ -3896,8 +3896,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
@@ -21,8 +21,8 @@ index 40aca7803cf2..cdb4672df837 100644
 +	max_wshare = min(16UL*1024*1024, limit);
 +	max_rshare = min(16UL*1024*1024, limit);
  
- 	sysctl_tcp_wmem[0] = SK_MEM_QUANTUM;
- 	sysctl_tcp_wmem[1] = 16*1024;
+ 	init_net.ipv4.sysctl_tcp_wmem[0] = SK_MEM_QUANTUM;
+ 	init_net.ipv4.sysctl_tcp_wmem[1] = 16*1024;
 -- 
-2.13.2
+2.20.1
 
