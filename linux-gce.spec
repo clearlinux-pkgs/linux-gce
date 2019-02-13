@@ -5,7 +5,7 @@
 
 Name:           linux-gce
 Version:        4.20.8
-Release:        51
+Release:        52
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
