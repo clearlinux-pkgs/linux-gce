@@ -4,13 +4,13 @@
 #
 
 Name:           linux-gce
-Version:        4.20.8
-Release:        52
+Version:        4.20.10
+Release:        53
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.20.8.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.20.10.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -79,7 +79,7 @@ Group:          kernel
 Linux kernel extra files
 
 %prep
-%setup -q -n linux-4.20.8
+%setup -q -n linux-4.20.10
 
 #     000X  cve, bugfixes patches
 %patch0001 -p1
