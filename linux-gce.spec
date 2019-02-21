@@ -5,7 +5,7 @@
 
 Name:           linux-gce
 Version:        4.20.11
-Release:        55
+Release:        56
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
@@ -29,6 +29,7 @@ Requires: systemd-bin
 #    000X: cve, bugfixes patches
 Patch0001: 0002-vhost-vsock-fix-vhost-vsock-cid-hashing-inconsistent.patch
 Patch0002: CVE-2019-8912.patch
+Patch0003: CVE-2019-8980.patch
 
 #    00XY: Mainline patches, upstream backports
 
@@ -85,6 +86,7 @@ Linux kernel extra files
 #     000X  cve, bugfixes patches
 %patch0001 -p1
 %patch0002 -p1
+%patch0003 -p1
 
 #     00XY  Mainline patches, upstream backports
 
