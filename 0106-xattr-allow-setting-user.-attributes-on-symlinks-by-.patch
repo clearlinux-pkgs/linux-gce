@@ -1,8 +1,7 @@
-From 03bea3a7a19ecba1a315e7d6f5edb38f5ad71fdc Mon Sep 17 00:00:00 2001
+From b4f11b0fa7bc3a13c65d0af8b22101ff2ea73838 Mon Sep 17 00:00:00 2001
 From: Alan Cox <alan@linux.intel.com>
 Date: Thu, 10 Mar 2016 15:11:28 +0000
-Subject: [PATCH 106/127] xattr: allow setting user.* attributes on symlinks by
- owner
+Subject: [PATCH] xattr: allow setting user.* attributes on symlinks by owner
 
 Kvmtool and clear containers supports using user attributes to label host
 files with the virtual uid/guid of the file in the container. This allows an
