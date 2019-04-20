@@ -120,7 +120,7 @@ license components for the linux package.
 %patch0123 -p1
 %patch0124 -p1
 %patch0125 -p1
-%patch0126 -p1
+#%patch0126 -p1
 %patch0127 -p1
 
 #Serie1.patch.start
