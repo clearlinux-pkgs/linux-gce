@@ -4,13 +4,13 @@
 #
 
 Name:           linux-gce
-Version:        5.0.10
-Release:        73
+Version:        5.0.11
+Release:        74
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.10.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.11.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -91,7 +91,7 @@ Group: Default
 license components for the linux package.
 
 %prep
-%setup -q -n linux-5.0.10
+%setup -q -n linux-5.0.11
 
 #     000X  cve, bugfixes patches
 %patch0001 -p1
