@@ -5,7 +5,7 @@
 
 Name:           linux-gce
 Version:        5.1.5
-Release:        85
+Release:        86
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
@@ -32,33 +32,33 @@ Requires: linux-gce-license = %{version}-%{release}
 #    00XY: Mainline patches, upstream backports
 
 #Serie.clr 01XX: Clear Linux patches
-Patch0101: 0101-i8042-decrease-debug-message-level-to-info.patch
-Patch0102: 0102-Increase-the-ext4-default-commit-age.patch
-Patch0103: 0103-silence-rapl.patch
-Patch0104: 0104-pci-pme-wakeups.patch
-Patch0105: 0105-ksm-wakeups.patch
-Patch0106: 0106-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
-Patch0107: 0107-init_task-faster-timerslack.patch
-Patch0108: 0108-overload-on-wakeup.patch
-Patch0109: 0109-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
-Patch0110: 0110-fix-initcall-timestamps.patch
-Patch0111: 0111-smpboot-reuse-timer-calibration.patch
+Patch0101: 0101-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+Patch0102: 0102-do-accept-in-LIFO-order-for-cache-efficiency.patch
+Patch0103: 0103-e1000e-increase-pause-and-refresh-time.patch
+Patch0104: 0104-give-rdrand-some-credit.patch
+Patch0105: 0105-i8042-decrease-debug-message-level-to-info.patch
+Patch0106: 0106-Increase-the-ext4-default-commit-age.patch
+Patch0107: 0107-ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+Patch0108: 0108-ksm-wakeups.patch
+Patch0109: 0109-locking-rwsem-spin-faster.patch
+Patch0110: 0110-Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+Patch0111: 0111-pci-pme-wakeups.patch
 Patch0112: 0112-raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
 Patch0113: 0113-reduce-e1000e-boot-time-by-tightening-sleep-ranges.patch
-Patch0114: 0114-give-rdrand-some-credit.patch
-Patch0115: 0115-e1000e-change-default-policy.patch
-Patch0116: 0116-ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
-Patch0117: 0117-igb-no-runtime-pm-to-fix-reboot-oops.patch
-Patch0118: 0118-tweak-perfbias.patch
-Patch0119: 0119-e1000e-increase-pause-and-refresh-time.patch
-Patch0120: 0120-time-ntp-fix-wakeups.patch
-Patch0121: 0121-mm-reduce-vmstat-wakeups.patch
-Patch0122: 0122-config-no-Atom.patch
-Patch0123: 0123-Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
-Patch0124: 0124-use-lfence-instead-of-rep-and-nop.patch
-Patch0125: 0125-do-accept-in-LIFO-order-for-cache-efficiency.patch
-Patch0126: 0126-zero-extra-registers.patch
-Patch0127: 0127-locking-rwsem-spin-faster.patch
+Patch0114: 0114-silence-rapl.patch
+Patch0115: 0115-smpboot-reuse-timer-calibration.patch
+Patch0116: 0116-tweak-perfbias.patch
+Patch0117: 0117-use-lfence-instead-of-rep-and-nop.patch
+Patch0118: 0118-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+Patch0119: 0119-zero-extra-registers.patch
+Patch0120: 0120-config-no-Atom.patch
+Patch0121: 0121-e1000e-change-default-policy.patch
+Patch0122: 0122-fix-initcall-timestamps.patch
+Patch0123: 0123-igb-no-runtime-pm-to-fix-reboot-oops.patch
+Patch0124: 0124-init_task-faster-timerslack.patch
+Patch0125: 0125-mm-reduce-vmstat-wakeups.patch
+Patch0126: 0126-overload-on-wakeup.patch
+Patch0127: 0127-time-ntp-fix-wakeups.patch
 #Serie.clr.end
 
 #Serie1.name WireGuard
@@ -99,7 +99,7 @@ license components for the linux package.
 %patch0102 -p1
 %patch0103 -p1
 %patch0104 -p1
-#%patch0105 -p1
+%patch0105 -p1
 %patch0106 -p1
 %patch0107 -p1
 %patch0108 -p1
@@ -112,7 +112,7 @@ license components for the linux package.
 %patch0115 -p1
 %patch0116 -p1
 %patch0117 -p1
-#%patch0118 -p1
+%patch0118 -p1
 %patch0119 -p1
 %patch0120 -p1
 %patch0121 -p1
