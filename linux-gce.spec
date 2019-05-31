@@ -4,13 +4,13 @@
 #
 
 Name:           linux-gce
-Version:        5.0.18
+Version:        5.1.5
 Release:        84
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.0.18.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.5.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -28,8 +28,6 @@ Requires: linux-gce-license = %{version}-%{release}
 %define __strip /bin/true
 
 #    000X: cve, bugfixes patches
-Patch0001: CVE-2019-9500.patch
-Patch0002: CVE-2019-9503.patch
 
 #    00XY: Mainline patches, upstream backports
 
@@ -90,11 +88,9 @@ Group: Default
 license components for the linux package.
 
 %prep
-%setup -q -n linux-5.0.18
+%setup -q -n linux-5.1.5
 
 #     000X  cve, bugfixes patches
-%patch0001 -p1
-%patch0002 -p1
 
 #     00XY  Mainline patches, upstream backports
 
@@ -103,7 +99,7 @@ license components for the linux package.
 %patch0102 -p1
 %patch0103 -p1
 %patch0104 -p1
-%patch0105 -p1
+#%patch0105 -p1
 %patch0106 -p1
 %patch0107 -p1
 %patch0108 -p1
@@ -116,7 +112,7 @@ license components for the linux package.
 %patch0115 -p1
 %patch0116 -p1
 %patch0117 -p1
-%patch0118 -p1
+#%patch0118 -p1
 %patch0119 -p1
 %patch0120 -p1
 %patch0121 -p1
