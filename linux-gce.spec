@@ -4,13 +4,13 @@
 #
 
 Name:           linux-gce
-Version:        5.1.17
-Release:        99
+Version:        5.1.18
+Release:        100
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.17.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.18.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -88,7 +88,7 @@ Group: Default
 license components for the linux package.
 
 %prep
-%setup -q -n linux-5.1.17
+%setup -q -n linux-5.1.18
 
 #     000X  cve, bugfixes patches
 
