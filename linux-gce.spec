@@ -4,13 +4,13 @@
 #
 
 Name:           linux-gce
-Version:        5.1.18
+Version:        5.2.3
 Release:        100
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.18.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.3.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -27,9 +27,16 @@ Requires: linux-gce-license = %{version}-%{release}
 %define debug_package %{nil}
 %define __strip /bin/true
 
-#    000X: cve, bugfixes patches
+#cve.start cve patches from 0001 to 009
+Patch0001: CVE-2019-12379.patch
+Patch0002: CVE-2019-12382.patch
+Patch0003: CVE-2019-12454.patch
+Patch0004: CVE-2019-12455.patch
+Patch0005: CVE-2019-12456.patch
+#cve.end
 
-#    00XY: Mainline patches, upstream backports
+#mainline: Mainline patches, upstream backport and fixes from 0010 to 0099
+#mainline.end
 
 #Serie.clr 01XX: Clear Linux patches
 Patch0101: 0101-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
@@ -47,19 +54,18 @@ Patch0112: 0112-raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
 Patch0113: 0113-reduce-e1000e-boot-time-by-tightening-sleep-ranges.patch
 Patch0114: 0114-silence-rapl.patch
 Patch0115: 0115-smpboot-reuse-timer-calibration.patch
-Patch0116: 0116-tweak-perfbias.patch
-Patch0117: 0117-use-lfence-instead-of-rep-and-nop.patch
-Patch0118: 0118-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
-Patch0119: 0119-zero-extra-registers.patch
-Patch0120: 0120-config-no-Atom.patch
-Patch0121: 0121-e1000e-change-default-policy.patch
-Patch0122: 0122-fix-initcall-timestamps.patch
-Patch0123: 0123-igb-no-runtime-pm-to-fix-reboot-oops.patch
-Patch0124: 0124-init_task-faster-timerslack.patch
-Patch0125: 0125-mm-reduce-vmstat-wakeups.patch
-Patch0126: 0126-overload-on-wakeup.patch
-Patch0127: 0127-time-ntp-fix-wakeups.patch
-#Serie.clr.end
+Patch0116: 0116-use-lfence-instead-of-rep-and-nop.patch
+Patch0117: 0117-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+Patch0118: 0118-zero-extra-registers.patch
+Patch0119: 0119-config-no-Atom.patch
+Patch0120: 0120-e1000e-change-default-policy.patch
+Patch0121: 0121-fix-initcall-timestamps.patch
+Patch0122: 0122-igb-no-runtime-pm-to-fix-reboot-oops.patch
+Patch0123: 0123-init_task-faster-timerslack.patch
+Patch0124: 0124-mm-reduce-vmstat-wakeups.patch
+Patch0125: 0125-overload-on-wakeup.patch
+Patch0126: 0126-time-ntp-fix-wakeups.patch
+#Serie.end
 
 #Serie1.name WireGuard
 #Serie1.git  https://git.zx2c4.com/WireGuard
@@ -88,13 +94,20 @@ Group: Default
 license components for the linux package.
 
 %prep
-%setup -q -n linux-5.1.18
+%setup -q -n linux-5.2.3
 
-#     000X  cve, bugfixes patches
+#cve.patch.start cve patches
+%patch0001 -p1
+%patch0002 -p1
+%patch0003 -p1
+%patch0004 -p1
+%patch0005 -p1
+#cve.patch.end
 
-#     00XY  Mainline patches, upstream backports
+#mainline.patch.start Mainline patches, upstream backport and fixes
+#mainline.patch.end
 
-#     01XX  Clear Linux patches
+#Serie.patch.start Clear Linux patches
 %patch0101 -p1
 %patch0102 -p1
 %patch0103 -p1
@@ -121,7 +134,7 @@ license components for the linux package.
 %patch0124 -p1
 %patch0125 -p1
 %patch0126 -p1
-%patch0127 -p1
+#Serie.patch.end
 
 #Serie1.patch.start
 %patch1001 -p1

@@ -10,10 +10,10 @@ Signed-off-by: Miguel Bernal Marin <miguel.bernal.marin@linux.intel.com>
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/net/ethernet/intel/e1000e/netdev.c b/drivers/net/ethernet/intel/e1000e/netdev.c
-index 7acc61e4f645..016d06f14049 100644
+index b081a1ef6859..2454a3757bf3 100644
 --- a/drivers/net/ethernet/intel/e1000e/netdev.c
 +++ b/drivers/net/ethernet/intel/e1000e/netdev.c
-@@ -4047,12 +4047,12 @@ void e1000e_reset(struct e1000_adapter *adapter)
+@@ -4046,12 +4046,12 @@ void e1000e_reset(struct e1000_adapter *adapter)
  	case e1000_pch_lpt:
  	case e1000_pch_spt:
  	case e1000_pch_cnp:
