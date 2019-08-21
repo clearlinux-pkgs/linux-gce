@@ -1,6 +1,7 @@
 #
 # This is a special configuration of the Linux kernel, based on linux package
 # for GCE Cloud support
+# 
 #
 
 Name:           linux-gce
@@ -34,7 +35,7 @@ Patch0003: CVE-2019-12455.patch
 Patch0004: CVE-2019-12456.patch
 #cve.end
 
-#mainline: Mainline patches, upstream backport and fixes from 0010 to 0099
+#mainline: Mainline patches, upstream backport and fixes from 0051 to 0099
 #mainline.end
 
 #Serie.clr 01XX: Clear Linux patches
@@ -78,7 +79,7 @@ The Linux kernel.
 
 %package extra
 License:        GPL-2.0
-Summary:        The Linux kernel extra files
+Summary:        The Linux kernel GCE extra files
 Group:          kernel
 Requires:       linux-gce-license = %{version}-%{release}
 
