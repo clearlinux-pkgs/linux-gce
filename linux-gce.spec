@@ -5,13 +5,13 @@
 #
 
 Name:           linux-gce
-Version:        5.2.20
+Version:        5.3.5
 Release:        119
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.2.20.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.3.5.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -36,9 +36,9 @@ Patch0001: CVE-2019-12379.patch
 #mainline.end
 
 #Serie.clr 01XX: Clear Linux patches
-Patch0101: 0101-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
-Patch0102: 0102-do-accept-in-LIFO-order-for-cache-efficiency.patch
-Patch0103: 0103-e1000e-increase-pause-and-refresh-time.patch
+Patch0101: 0101-consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
+Patch0102: 0102-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+Patch0103: 0103-do-accept-in-LIFO-order-for-cache-efficiency.patch
 Patch0104: 0104-give-rdrand-some-credit.patch
 Patch0105: 0105-i8042-decrease-debug-message-level-to-info.patch
 Patch0106: 0106-Increase-the-ext4-default-commit-age.patch
@@ -48,20 +48,19 @@ Patch0109: 0109-locking-rwsem-spin-faster.patch
 Patch0110: 0110-Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
 Patch0111: 0111-pci-pme-wakeups.patch
 Patch0112: 0112-raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
-Patch0113: 0113-reduce-e1000e-boot-time-by-tightening-sleep-ranges.patch
-Patch0114: 0114-silence-rapl.patch
-Patch0115: 0115-smpboot-reuse-timer-calibration.patch
-Patch0116: 0116-use-lfence-instead-of-rep-and-nop.patch
-Patch0117: 0117-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
-Patch0118: 0118-zero-extra-registers.patch
-Patch0119: 0119-config-no-Atom.patch
-Patch0120: 0120-e1000e-change-default-policy.patch
-Patch0121: 0121-fix-initcall-timestamps.patch
-Patch0122: 0122-igb-no-runtime-pm-to-fix-reboot-oops.patch
-Patch0123: 0123-init_task-faster-timerslack.patch
-Patch0124: 0124-mm-reduce-vmstat-wakeups.patch
-Patch0125: 0125-overload-on-wakeup.patch
-Patch0126: 0126-time-ntp-fix-wakeups.patch
+Patch0113: 0113-silence-rapl.patch
+Patch0114: 0114-smpboot-reuse-timer-calibration.patch
+Patch0115: 0115-use-lfence-instead-of-rep-and-nop.patch
+Patch0116: 0116-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+Patch0117: 0117-zero-extra-registers.patch
+Patch0118: 0118-config-no-Atom.patch
+Patch0119: 0119-e1000e-change-default-policy.patch
+Patch0120: 0120-fix-initcall-timestamps.patch
+Patch0121: 0121-igb-no-runtime-pm-to-fix-reboot-oops.patch
+Patch0122: 0122-init_task-faster-timerslack.patch
+Patch0123: 0123-mm-reduce-vmstat-wakeups.patch
+Patch0124: 0124-overload-on-wakeup.patch
+Patch0125: 0125-time-ntp-fix-wakeups.patch
 #Serie.end
 
 #Serie1.name WireGuard
@@ -91,13 +90,10 @@ Group: Default
 license components for the linux package.
 
 %prep
-%setup -q -n linux-5.2.20
+%setup -q -n linux-5.3.5
 
 #cve.patch.start cve patches
 %patch0001 -p1
-%patch0002 -p1
-%patch0003 -p1
-%patch0004 -p1
 #cve.patch.end
 
 #mainline.patch.start Mainline patches, upstream backport and fixes
@@ -129,7 +125,6 @@ license components for the linux package.
 %patch0123 -p1
 %patch0124 -p1
 %patch0125 -p1
-%patch0126 -p1
 #Serie.patch.end
 
 #Serie1.patch.start
