@@ -6,7 +6,7 @@
 
 Name:           linux-gce
 Version:        5.3.5
-Release:        119
+Release:        120
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
@@ -36,31 +36,30 @@ Patch0001: CVE-2019-12379.patch
 #mainline.end
 
 #Serie.clr 01XX: Clear Linux patches
-Patch0101: 0101-consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
-Patch0102: 0102-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
-Patch0103: 0103-do-accept-in-LIFO-order-for-cache-efficiency.patch
-Patch0104: 0104-give-rdrand-some-credit.patch
-Patch0105: 0105-i8042-decrease-debug-message-level-to-info.patch
-Patch0106: 0106-Increase-the-ext4-default-commit-age.patch
-Patch0107: 0107-ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
-Patch0108: 0108-ksm-wakeups.patch
-Patch0109: 0109-locking-rwsem-spin-faster.patch
-Patch0110: 0110-Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
-Patch0111: 0111-pci-pme-wakeups.patch
-Patch0112: 0112-raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
-Patch0113: 0113-silence-rapl.patch
-Patch0114: 0114-smpboot-reuse-timer-calibration.patch
-Patch0115: 0115-use-lfence-instead-of-rep-and-nop.patch
-Patch0116: 0116-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
-Patch0117: 0117-zero-extra-registers.patch
-Patch0118: 0118-config-no-Atom.patch
-Patch0119: 0119-e1000e-change-default-policy.patch
-Patch0120: 0120-fix-initcall-timestamps.patch
-Patch0121: 0121-igb-no-runtime-pm-to-fix-reboot-oops.patch
-Patch0122: 0122-init_task-faster-timerslack.patch
-Patch0123: 0123-mm-reduce-vmstat-wakeups.patch
-Patch0124: 0124-overload-on-wakeup.patch
-Patch0125: 0125-time-ntp-fix-wakeups.patch
+Patch0101: 0101-bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+Patch0102: 0102-do-accept-in-LIFO-order-for-cache-efficiency.patch
+Patch0103: 0103-give-rdrand-some-credit.patch
+Patch0104: 0104-i8042-decrease-debug-message-level-to-info.patch
+Patch0105: 0105-Increase-the-ext4-default-commit-age.patch
+Patch0106: 0106-ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+Patch0107: 0107-ksm-wakeups.patch
+Patch0108: 0108-locking-rwsem-spin-faster.patch
+Patch0109: 0109-Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+Patch0110: 0110-pci-pme-wakeups.patch
+Patch0111: 0111-raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+Patch0112: 0112-silence-rapl.patch
+Patch0113: 0113-smpboot-reuse-timer-calibration.patch
+Patch0114: 0114-use-lfence-instead-of-rep-and-nop.patch
+Patch0115: 0115-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+Patch0116: 0116-zero-extra-registers.patch
+Patch0117: 0117-config-no-Atom.patch
+Patch0118: 0118-e1000e-change-default-policy.patch
+Patch0119: 0119-fix-initcall-timestamps.patch
+Patch0120: 0120-igb-no-runtime-pm-to-fix-reboot-oops.patch
+Patch0121: 0121-init_task-faster-timerslack.patch
+Patch0122: 0122-mm-reduce-vmstat-wakeups.patch
+Patch0123: 0123-overload-on-wakeup.patch
+Patch0124: 0124-time-ntp-fix-wakeups.patch
 #Serie.end
 
 #Serie1.name WireGuard
@@ -124,7 +123,6 @@ license components for the linux package.
 %patch0122 -p1
 %patch0123 -p1
 %patch0124 -p1
-%patch0125 -p1
 #Serie.patch.end
 
 #Serie1.patch.start
