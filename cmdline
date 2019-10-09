@@ -1,1 +1,11 @@
-console=tty0 console=ttyS0,38400n8d init=/usr/lib/systemd/systemd-bootchart initcall_debug tsc=reliable no_timer_check noreplace-smp rootfstype=ext4 cryptomgr.notests rcupdate.rcu_expedited=1 rw 
+console=tty0
+console=ttyS0,38400n8d
+cryptomgr.notests
+init=/usr/lib/systemd/systemd-bootchart
+initcall_debug
+no_timer_check
+noreplace-smp
+rcupdate.rcu_expedited=1
+rootfstype=ext4
+tsc=reliable
+rw 
