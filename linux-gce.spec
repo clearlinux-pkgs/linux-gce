@@ -6,7 +6,7 @@
 
 Name:           linux-gce
 Version:        5.4.19
-Release:        148
+Release:        149
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
@@ -61,7 +61,6 @@ Patch0121: 0121-init_task-faster-timerslack.patch
 Patch0122: 0122-mm-reduce-vmstat-wakeups.patch
 Patch0123: 0123-overload-on-wakeup.patch
 Patch0124: 0124-time-ntp-fix-wakeups.patch
-Patch0125: 0125-add-workaround-for-binutils-optimization.patch
 #Serie.end
 
 #Serie1.name WireGuard
@@ -126,7 +125,6 @@ license components for the linux package.
 %patch0122 -p1
 %patch0123 -p1
 %patch0124 -p1
-%patch0125 -p1
 #Serie.patch.end
 
 #Serie1.patch.start
