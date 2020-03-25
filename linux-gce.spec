@@ -5,13 +5,13 @@
 #
 
 Name:           linux-gce
-Version:        5.5.12
-Release:        159
+Version:        5.5.13
+Release:        160
 License:        GPL-2.0
 Summary:        The Linux kernel for use in the GCE cloud
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.5.12.tar.xz
+Source0:        https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.5.13.tar.xz
 Source1:        config
 Source2:        cmdline
 
@@ -89,7 +89,7 @@ Group: Default
 license components for the linux package.
 
 %prep
-%setup -q -n linux-5.5.12
+%setup -q -n linux-5.5.13
 
 #cve.patch.start cve patches
 %patch0001 -p1
