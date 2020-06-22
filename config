@@ -1,10 +1,10 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.7.4 Kernel Configuration
+# Linux/x86 5.7.5 Kernel Configuration
 #
 
 #
-# Compiler: gcc (Clear Linux OS for Intel Architecture) 10.1.1 20200610 releases/gcc-10.1.0-162-g5bb75908cb
+# Compiler: gcc (Clear Linux OS for Intel Architecture) 10.1.1 20200618 releases/gcc-10.1.0-218-g6e81b0cf4f
 #
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=100101
@@ -3797,3 +3797,8 @@ CONFIG_CC_HAS_SANCOV_TRACE_PC=y
 # CONFIG_MEMTEST is not set
 # end of Kernel Testing and Coverage
 # end of Kernel hacking
+
+
+# kernel-config sources:
+# FILEVER=/usr/share/kernel-config/base-5.7-4-44
+# FILEVER=/usr/share/kernel-config/mandatory-5.7-4-44
