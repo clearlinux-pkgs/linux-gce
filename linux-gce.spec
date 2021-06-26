@@ -45,20 +45,19 @@ Patch0107: 0107-ksm-wakeups.patch
 Patch0108: 0108-locking-rwsem-spin-faster.patch
 Patch0109: 0109-Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
 Patch0110: 0110-pci-pme-wakeups.patch
-Patch0111: 0111-raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
-Patch0112: 0112-silence-rapl.patch
-Patch0113: 0113-smpboot-reuse-timer-calibration.patch
-Patch0114: 0114-use-lfence-instead-of-rep-and-nop.patch
-Patch0115: 0115-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
-Patch0116: 0116-zero-extra-registers.patch
-Patch0117: 0117-config-no-Atom.patch
-Patch0118: 0118-e1000e-change-default-policy.patch
-Patch0119: 0119-fix-initcall-timestamps.patch
-Patch0120: 0120-igb-no-runtime-pm-to-fix-reboot-oops.patch
-Patch0121: 0121-init_task-faster-timerslack.patch
-Patch0122: 0122-mm-reduce-vmstat-wakeups.patch
-Patch0123: 0123-overload-on-wakeup.patch
-Patch0124: 0124-time-ntp-fix-wakeups.patch
+Patch0111: 0111-silence-rapl.patch
+Patch0112: 0112-smpboot-reuse-timer-calibration.patch
+Patch0113: 0113-use-lfence-instead-of-rep-and-nop.patch
+Patch0114: 0114-xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+Patch0115: 0115-zero-extra-registers.patch
+Patch0116: 0116-config-no-Atom.patch
+Patch0117: 0117-e1000e-change-default-policy.patch
+Patch0118: 0118-fix-initcall-timestamps.patch
+Patch0119: 0119-igb-no-runtime-pm-to-fix-reboot-oops.patch
+Patch0120: 0120-init_task-faster-timerslack.patch
+Patch0121: 0121-mm-reduce-vmstat-wakeups.patch
+Patch0122: 0122-overload-on-wakeup.patch
+Patch0123: 0123-time-ntp-fix-wakeups.patch
 #Serie.end
 
 %description
@@ -113,7 +112,6 @@ license components for the linux package.
 %patch0121 -p1
 %patch0122 -p1
 %patch0123 -p1
-%patch0124 -p1
 #Serie.patch.end
 
 cp %{SOURCE1} .
