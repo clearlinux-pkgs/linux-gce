@@ -57,7 +57,6 @@ Patch0119: 0119-igb-no-runtime-pm-to-fix-reboot-oops.patch
 Patch0120: 0120-init_task-faster-timerslack.patch
 Patch0121: 0121-mm-reduce-vmstat-wakeups.patch
 Patch0122: 0122-overload-on-wakeup.patch
-Patch0123: 0123-time-ntp-fix-wakeups.patch
 #Serie.end
 
 %description
@@ -111,7 +110,6 @@ license components for the linux package.
 %patch0120 -p1
 %patch0121 -p1
 %patch0122 -p1
-%patch0123 -p1
 #Serie.patch.end
 
 cp %{SOURCE1} .
