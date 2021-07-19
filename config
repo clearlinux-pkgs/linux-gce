@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Linux/x86 5.13.2 Kernel Configuration
+# Linux/x86 5.13.3 Kernel Configuration
 #
 CONFIG_CC_VERSION_TEXT="gcc (Clear Linux OS for Intel Architecture) 11.1.1 20210714 releases/gcc-11.1.0-444-g5bde7650ca"
 CONFIG_CC_IS_GCC=y
@@ -3910,3 +3910,8 @@ CONFIG_ARCH_USE_MEMTEST=y
 # CONFIG_MEMTEST is not set
 # end of Kernel Testing and Coverage
 # end of Kernel hacking
+
+
+# kernel-config sources:
+# FILEVER=/usr/share/kernel-config/base-5.13-5-51
+# FILEVER=/usr/share/kernel-config/mandatory-5.13-5-51
