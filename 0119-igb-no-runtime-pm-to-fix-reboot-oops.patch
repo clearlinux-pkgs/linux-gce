@@ -9,7 +9,7 @@ Causes oops on reboot due to a race between runtime resume and shutdown
  1 file changed, 3 deletions(-)
 
 diff --git a/drivers/net/ethernet/intel/igb/igb_main.c b/drivers/net/ethernet/intel/igb/igb_main.c
-index b2a042f825ff..871baff0322f 100644
+index 7b1885f9ce03..9f11d4c3ab7d 100644
 --- a/drivers/net/ethernet/intel/igb/igb_main.c
 +++ b/drivers/net/ethernet/intel/igb/igb_main.c
 @@ -224,9 +224,6 @@ static struct pci_driver igb_driver = {
